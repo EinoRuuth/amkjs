@@ -13,7 +13,7 @@
     while (duplicate == false) {
         const number = parseInt(prompt('Type a number'));
         if (array.includes(number)) {
-            alert('This number has already been given');
+            console.log('This number has already been given');
             duplicate = true;   
         } else {
             array.push(number);
