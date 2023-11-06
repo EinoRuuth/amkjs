@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Testing JavaScript</title>
+</head>
+<body>
+<p id="target"></p>
+<script>
+    'use strict';
+    function even(givenarray) {
+        let evenarray = []
+        for (let i = 0; i < givenarray.length; i++) {
+            if (givenarray[i] % 2 == 0) {
+                evenarray.push(givenarray[i]);
+            }
+        }
+        return evenarray;
+    }
+    let array = [2, 7, 4]
+    console.log(array)
+    console.log(even(array))
+
+</script>
+</body>
+</html>
