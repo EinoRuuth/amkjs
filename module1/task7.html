@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Testing JavaScript</title>
+</head>
+<body>
+<p id="target"></p>
+<script>
+    'use strict';
+    const numberStr = prompt('Type the number of dice');
+    let diceamount = parseInt(numberStr);
+    let dicesum = 0;
+    for (let i = 1; i <= diceamount ; i++) {
+        let dicenumber = 1 + Math.floor(Math.random() * 6);
+        dicesum = dicesum + dicenumber;
+    }
+    console.log(dicesum);
+</script>
+</body>
+</html>

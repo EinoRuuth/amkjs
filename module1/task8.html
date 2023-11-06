@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Testing JavaScript</title>
+</head>
+<body>
+<ul id="target"></ul>
+<script>
+    'use strict';
+    let list = document.getElementById("target");
+    const startyear = prompt('Type the start year');
+    const endyear = prompt('Type the end year');
+    for (let i = startyear; i <= endyear ; i++) {
+        if (i % 4 == 0) {
+            if (i % 100 == 0) {
+                if (i % 400 == 0) {
+                    var li = document.createElement('li');
+                    li.innerText = i;
+                    list.appendChild(li);
+                }
+            }
+            var li = document.createElement('li');
+            li.innerText = i;
+            list.appendChild(li);
+        }
+    }
+</script>
+</body>
+</html>

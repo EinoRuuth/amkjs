@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Testing JavaScript</title>
+</head>
+<body>
+<p id="target"></p>
+<script>
+    'use strict';
+    let isPrime = true;
+    const numba = parseInt(prompt('Type a number'));
+    for (let i = 2; i < numba; i++) {
+        if (numba % i == 0) {
+            isPrime = false;
+            break;
+        }
+    }
+    if (isPrime) {
+        document.querySelector('#target').innerHTML = numba + ' is a prime number';
+    } else {
+        document.querySelector('#target').innerHTML = numba + ' is not a prime number';
+    }
+</script>
+</body>
+</html>

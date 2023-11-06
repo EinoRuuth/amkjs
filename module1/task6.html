@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Testing JavaScript</title>
+</head>
+<body>
+<p id="target"></p>
+<script>
+    'use strict';
+    const awnser = confirm("Should I calculate the square root?");
+    if (awnser == true) {
+        const numberStr = prompt('Type a number');
+        let number = parseInt(numberStr);
+        if (number > 0) {
+            const squared = Math.sqrt(number);
+            document.querySelector('#target').innerHTML = squared;
+        }
+        else {
+            document.querySelector('#target').innerHTML = "The square root of a negative number is not defined";
+        }
+    }
+    else {
+        document.querySelector('#target').innerHTML = "The square root is not calculated.";
+    }
+</script>
+</body>
+</html>

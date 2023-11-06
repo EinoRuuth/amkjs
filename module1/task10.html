@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Testing JavaScript</title>
+</head>
+<body>
+<p id="target"></p>
+<script>
+    'use strict';
+    let isPrime = true;
+    let passed = 0;
+    const iterations = 10000;
+    const diceamount = parseInt(prompt('Type the number of dice'));
+    const dicesumamount = parseInt(prompt('Type the sum of eyes'));
+    for (let i = 0; i < iterations; i++) {
+        let dicesum = 0;
+        for (let x = 1; x <= diceamount ; x++) {
+            let eye = 1 + Math.floor(Math.random() * 6);
+            dicesum = dicesum + eye;
+        }
+        if (dicesum == dicesumamount) {
+            passed ++;
+        }
+    }
+    console.log(passed)
+    let chance = (passed / iterations) * 100;
+    document.querySelector('#target').innerHTML = `Probability to get sum ${dicesumamount} with ${diceamount} dice is ${chance.toFixed(2)} %`;
+</script>
+</body>
+</html>
