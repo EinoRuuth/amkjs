@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Testing JavaScript</title>
+</head>
+<body>
+<p id="target"></p>
+<script>
+    'use strict';
+    function concat(givenarray) {
+        let returnstring = '';
+        for (let i = 0; i < givenarray.length; i++) {
+            returnstring += givenarray[i];
+        }
+        return returnstring;
+    }
+    let array = ['Johnny', 'DeeDee', 'Joey', 'Marky']
+    document.querySelector('#target').innerHTML = concat(array);
+
+</script>
+</body>
+</html>

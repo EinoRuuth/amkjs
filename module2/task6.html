@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Testing JavaScript</title>
+</head>
+<body>
+<ul id="target"></ul>
+<script>
+    'use strict';
+    function rollDice() {
+        let eye = 1 + Math.floor(Math.random() * 6);
+        return eye;
+    }
+
+    let list = document.getElementById("target");
+    let rolled6 = false;
+    while (rolled6 == false) {
+        let roll = rollDice();
+        if (roll == 6) {
+            rolled6 = true;
+        }
+        else {
+            var li = document.createElement('li');
+            li.innerText = roll;
+            list.appendChild(li);
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Testing JavaScript</title>
+</head>
+<body>
+<ol id="target"></ol>
+<script>
+    'use strict';
+    let array = []
+    let list = document.getElementById("target");
+    const number = parseInt(prompt('Type the number of participants'));
+    for (let i = 0; i < number; i++) {
+        const person = prompt('Type the name of participant');
+        array.push(person);
+    }
+    array.sort();
+    for (let i = 0; i < array.length; i++) {
+        var li = document.createElement('li');
+        li.innerText = array[i];
+        list.appendChild(li);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Testing JavaScript</title>
+</head>
+<body>
+<ul id="target"></ul>
+<script>
+    'use strict';
+    let array = [];
+    let duplicate = false;
+    while (duplicate == false) {
+        const number = parseInt(prompt('Type a number'));
+        if (array.includes(number)) {
+            alert('This number has already been given');
+            duplicate = true;   
+        } else {
+            array.push(number);
+        }
+    }
+
+    array.sort((a,b)=> a-b);
+    for (let i = 0; i < array.length; i++) {
+        console.log(array[i]);
+    }
+</script>
+</body>
+</html>

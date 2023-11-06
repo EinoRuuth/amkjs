@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Testing JavaScript</title>
+</head>
+<body>
+<ul id="target"></ul>
+<script>
+    'use strict';
+    let array = [];
+    var zerogiven = false;
+    let list = document.getElementById("target");
+    while (zerogiven == false) {
+        const number = parseInt(prompt('Type a number'));
+        if (number == 0) {
+            zerogiven = true;
+        }
+        else {
+            array.push(number);
+        }
+    }
+    array.sort((a,b)=> b-a);
+    for (let i = 0; i < array.length; i++) {
+        console.log(array[i]);
+    }
+</script>
+</body>
+</html>

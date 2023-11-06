@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Testing JavaScript</title>
+</head>
+<body>
+<ul id="target"></ul>
+<script>
+    'use strict';
+    function rollDice(eyes) {
+        let eye = 1 + Math.floor(Math.random() * eyes);
+        return parseInt(eye);
+    }
+
+    const eyes = parseInt(prompt('Give the amount of eyes'));
+
+    let list = document.getElementById("target");
+    let rolled6 = false;
+    while (rolled6 == false) {
+        let roll = rollDice(eyes);
+        if (roll == eyes) {
+            rolled6 = true;
+        }
+        else {
+            var li = document.createElement('li');
+            li.innerText = roll;
+            list.appendChild(li);
+        }
+    }
+</script>
+</body>
+</html>
