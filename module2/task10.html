@@ -8,19 +8,33 @@
 <p id="target"></p>
 <script>
     'use strict';
-    function even(givenarray) {
-        let evenarray = []
-        for (let i = 0; i < givenarray.length; i++) {
-            if (givenarray[i] % 2 == 0) {
-                evenarray.push(givenarray[i]);
+    let candidatelist = [];
+    const candidatenumber = parseInt(prompt('Type number of candidates'));
+    for (let i = 1; i <= candidatenumber; i++) {
+        let candidatename = prompt('Name for candidate ' + i);
+        let candidatevote = {
+                        name: candidatename,
+                        votes: 0
+                        }            
+        candidatelist.push(candidatevote);
+    }
+    const voternmumber = parseInt(prompt('Type the amount of voters'));
+    for (let i = 0; i < voternmumber; i++) {
+        let vote = prompt('Type the name of candidate');
+        for (let j = 0; j < candidatelist.length; j++) {
+            let culprit = candidatelist[j];
+            if (vote == culprit.name) {
+                culprit.votes += 1;
             }
         }
-        return evenarray;
     }
-    let array = [2, 7, 4]
-    console.log(array)
-    console.log(even(array))
-
+    candidatelist.sort((a, b) => {
+        return b.votes - a.votes;
+    });
+    console.log(`The winner is ${candidatelist[0].name} with ${candidatelist[0].votes} votes.\nresults:`);
+    for (let i = 0; i < candidatenumber; i++) {
+        console.log(`${candidatelist[i].name}: ${candidatelist[i].votes} votes`)
+    }
 </script>
 </body>
 </html>
