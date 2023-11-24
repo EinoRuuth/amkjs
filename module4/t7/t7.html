@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task 7</title>
     <script src="t7.js" defer></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" rel="stylesheet">
 </head>
 
 <body>
@@ -14,6 +15,11 @@
         <input name="q" type="text">
         <input type="submit" value="Search">
     </form>
+    <br>
+    <div id="map" style="width: 100%; height: 400px;"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    <script src="Polyline.encoded.js"></script>
+    <p id="targetp"></p>
 </body>
 
 </html>
