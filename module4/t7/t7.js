@@ -90,7 +90,7 @@ form.addEventListener('submit', async function getcoordinates(evt) {
     }).then(function (result) {
         console.log(`long ${result.bbox[0]}`)
         console.log(`lat ${result.bbox[1]}`)
-        getRoute({latitude: 60.223850, longitude: 24.758631}, {latitude: result.bbox[1], longitude: result.bbox[0]})
+        getRoute({latitude: result.bbox[1], longitude: result.bbox[0]}, {latitude: 60.223850, longitude: 24.758631})
     });
     
 });
